@@ -1,0 +1,34 @@
+﻿<Window x:Class="Sorter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sorter"
+        mc:Ignorable="d"
+        Title="Sorting Settings" Height="600" Width="800"
+        ResizeMode="NoResize">
+
+    <StackPanel Margin="15" Orientation="Vertical">
+        <TextBlock Text="SORTING APPLICATION" FontSize="30" FontFamily="Bahnschrift Condensed" TextAlignment="Center"/>
+        
+        <StackPanel Margin="10" Height="27" Orientation="Horizontal">
+            <TextBlock Text="NUMBER OF ITEMS:" FontSize="25" FontFamily="Bahnschrift SemiCondensed" TextAlignment="Center"/>
+            <TextBox Name="numBoxItems" Margin="15, 0, 0, 0" Width="100" PreviewTextInput="NumberValidationTextBox" FontFamily="Bahnschrift SemiCondensed" FontSize="22"/>
+        </StackPanel>
+        
+        <StackPanel Margin="10" Height="27" Orientation="Horizontal">
+            <TextBlock Text="DELAY:" FontSize="25" FontFamily="Bahnschrift SemiCondensed" TextAlignment="Center"/>
+            <TextBox Name="numBoxDelay" Margin="15, 0, 0, 0" Width="100" PreviewTextInput="NumberValidationTextBox" FontFamily="Bahnschrift SemiCondensed" FontSize="22"/>
+        </StackPanel>
+        
+        <StackPanel Margin="10" Height="27" Orientation="Horizontal">
+            <TextBlock Text="SORTING TYPE:" FontSize="25" FontFamily="Bahnschrift SemiCondensed" TextAlignment="Center"/>
+            <ComboBox Name="sortingType" Margin="15, 0, 0, 0" Width="200" FontSize="20" FontFamily="Bahnschrift SemiCondensed">
+                <ComboBoxItem>Selection Sort</ComboBoxItem>
+                <ComboBoxItem>Insertion Sort</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        
+        <Button Content="Start" Click="StartSort" Width="170" Height="30" Margin="30" FontSize="24" FontFamily="Bahnschrift SemiCondensed"/>
+    </StackPanel>
+</Window>
